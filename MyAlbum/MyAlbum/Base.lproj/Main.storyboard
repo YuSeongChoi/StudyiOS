@@ -15,9 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VJ-nB-FXm">
-                                <rect key="frame" x="144" y="697" width="92" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VJ-nB-FXm">
+                                <rect key="frame" x="144" y="685" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Seq-kU-hOf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="Refresh">
                                     <color key="titleColor" red="0.12324131320969664" green="0.12780154898512638" blue="0.92133218050003052" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -26,26 +28,44 @@
                                     <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nA-Fi-yJH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MyPics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqv-HJ-oV7">
-                                <rect key="frame" x="139" y="114" width="102" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyPics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqv-HJ-oV7">
+                                <rect key="frame" x="139" y="114" width="102" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fiF-sk-m6X"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="mU2-7e-pEr">
-                                <rect key="frame" x="27" y="211" width="320" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="mU2-7e-pEr">
+                                <rect key="frame" x="27" y="211" width="321" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="zq2-TP-n8C"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$100000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zI-Js-u6y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$100000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zI-Js-u6y">
                                 <rect key="frame" x="125" y="611" width="135" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2VJ-nB-FXm" secondAttribute="bottom" constant="43" id="0Tb-mO-j1U"/>
+                            <constraint firstItem="Tqv-HJ-oV7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="EgF-MP-aJL"/>
+                            <constraint firstItem="6zI-Js-u6y" firstAttribute="centerX" secondItem="2VJ-nB-FXm" secondAttribute="centerX" id="H4q-cT-bQd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tqv-HJ-oV7" secondAttribute="trailing" constant="134" id="PUw-f8-xGu"/>
+                            <constraint firstItem="mU2-7e-pEr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="RMS-v8-1vj"/>
+                            <constraint firstItem="mU2-7e-pEr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="VOD-sg-pH1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2VJ-nB-FXm" secondAttribute="trailing" constant="131" id="VpI-nt-Ziw"/>
+                            <constraint firstItem="Tqv-HJ-oV7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="WyL-m4-hkl"/>
+                            <constraint firstItem="2VJ-nB-FXm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="XzL-qP-rCZ"/>
+                            <constraint firstItem="2VJ-nB-FXm" firstAttribute="top" secondItem="6zI-Js-u6y" secondAttribute="bottom" constant="38" id="duU-CV-UTM"/>
+                            <constraint firstItem="mU2-7e-pEr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="igx-3E-7vc"/>
+                            <constraint firstItem="mU2-7e-pEr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="167" id="s0y-kI-S9g"/>
+                            <constraint firstItem="mU2-7e-pEr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="uW6-Ms-1aC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
