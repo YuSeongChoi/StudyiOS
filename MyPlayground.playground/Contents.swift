@@ -22,3 +22,11 @@ let (x3, y3) = coordinatesNamed
 
 x3
 y3
+
+
+// --- Boolean
+
+let yes = true
+let no = false
+
+let isFourGreaterThanFive = 4 > 5
