@@ -23,3 +23,32 @@ func printTotalPrice(price: Int, count: Int) {
 }
 
 printTotalPrice(price: 1500, count: 5)
+
+func printTotalPrice2(_ price: Int, _ count: Int) {
+    print("Total Price2 : \(price * count)")
+}
+
+printTotalPrice2(1500,5)
+
+func printTotalPrice3(가격 price: Int, 갯수 count: Int) {
+    print("Total Price3 : \(price * count)")
+}
+
+printTotalPrice3(가격: 2000, 갯수: 5)
+
+func printTotalPriceWithDefaultValue(price: Int = 1500, count: Int) {
+    print("Total Price : \(price * count)")
+}
+
+printTotalPriceWithDefaultValue(count: 12)
+printTotalPriceWithDefaultValue(price: 2500, count: 10)
+
+
+func totalPrice(price: Int, count: Int) -> Int {
+    let totalPrice = price * count
+    return totalPrice
+}
+
+let calculatedPrice = totalPrice(price: 10000, count: 77)
+calculatedPrice
+
