@@ -65,7 +65,13 @@ printClosestStore(currentLocaion: myLocation, stores: stores)
 // 2. 강의 어레이와 강사 이름을 받아서, 해당 강사의 강의 이름을 출력하는 함수 만들기
 // 3. 강의 3개 만들고 강사이름으로 강의 찾기
 
-struct Lecture {
+// CustomStringConvertible
+
+struct Lecture: CustomStringConvertible {
+    var description: String {
+        return "Title : \(lectureName), Intstructor : \(teacherName)"
+    }
+    
     var lectureName: String
     var teacherName: String
     var numOfStudents: Int
@@ -86,4 +92,4 @@ let lect3 = Lecture(lectureName: "JAVA", teacherName: "egoing", numOfStudents: 3
 let lectures = [lect1, lect2, lect3]
 showLecture(teacher: "egoing", lectures: lectures)
 
-
+print(lect1)
