@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04413CFE24D27C5B0008DD6C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04413CFD24D27C5B0008DD6C /* DetailViewController.swift */; };
+		04413D0024D3DAAF0008DD6C /* BountyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04413CFF24D3DAAF0008DD6C /* BountyInfo.swift */; };
 		0495619B24CFE4B2001B3BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495619A24CFE4B2001B3BB8 /* AppDelegate.swift */; };
 		0495619D24CFE4B2001B3BB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495619C24CFE4B2001B3BB8 /* SceneDelegate.swift */; };
 		049561A224CFE4B2001B3BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049561A024CFE4B2001B3BB8 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		04413CFD24D27C5B0008DD6C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		04413CFF24D3DAAF0008DD6C /* BountyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyInfo.swift; sourceTree = "<group>"; };
 		0495619724CFE4B2001B3BB8 /* BountyList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BountyList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0495619A24CFE4B2001B3BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0495619C24CFE4B2001B3BB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				0495619C24CFE4B2001B3BB8 /* SceneDelegate.swift */,
 				04413CFD24D27C5B0008DD6C /* DetailViewController.swift */,
 				049561AE24CFE5BA001B3BB8 /* BountyViewController.swift */,
+				04413CFF24D3DAAF0008DD6C /* BountyInfo.swift */,
 				049561A024CFE4B2001B3BB8 /* Main.storyboard */,
 				049561A324CFE4B4001B3BB8 /* Assets.xcassets */,
 				049561A524CFE4B4001B3BB8 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04413D0024D3DAAF0008DD6C /* BountyInfo.swift in Sources */,
 				0495619B24CFE4B2001B3BB8 /* AppDelegate.swift in Sources */,
 				049561AF24CFE5BA001B3BB8 /* BountyViewController.swift in Sources */,
 				0495619D24CFE4B2001B3BB8 /* SceneDelegate.swift in Sources */,
