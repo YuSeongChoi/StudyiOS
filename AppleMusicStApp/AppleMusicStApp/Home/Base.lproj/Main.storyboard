@@ -81,7 +81,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzg-Gx-vYc">
-                                            <rect key="frame" x="29" y="74" width="364" height="199"/>
+                                            <rect key="frame" x="8" y="74" width="398" height="214"/>
+                                            <state key="normal" title="here"/>
                                             <connections>
                                                 <action selector="cardTapped:" destination="0ow-eF-dff" eventType="touchUpInside" id="sPa-9b-Iyc"/>
                                             </connections>
@@ -92,7 +93,7 @@
                                                 <constraint firstAttribute="height" constant="200" id="y1X-3Z-sHx"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qVJ-y0-cO0">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qVJ-y0-cO0">
                                             <rect key="frame" x="348" y="233.5" width="35" height="34"/>
                                             <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
@@ -103,8 +104,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY NOW Today's pick" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ter-7a-tKf">
-                                            <rect key="frame" x="39" y="234.5" width="82" height="33.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="PLAY NOW Today's pick" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ter-7a-tKf">
+                                            <rect key="frame" x="39" y="235" width="293" height="34"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -119,7 +120,7 @@
                                         <constraint firstItem="eIu-JA-LIv" firstAttribute="top" secondItem="zpB-Us-loy" secondAttribute="bottom" constant="7" id="OcC-Pp-pze"/>
                                         <constraint firstItem="qVJ-y0-cO0" firstAttribute="bottom" secondItem="eIu-JA-LIv" secondAttribute="bottom" constant="-5" id="Oyp-xO-Cgl"/>
                                         <constraint firstItem="eIu-JA-LIv" firstAttribute="leading" secondItem="0ow-eF-dff" secondAttribute="leading" constant="29" id="RtR-wb-t0g"/>
-                                        <constraint firstItem="qVJ-y0-cO0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ter-7a-tKf" secondAttribute="trailing" constant="15" id="THq-SN-FUW"/>
+                                        <constraint firstItem="qVJ-y0-cO0" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ter-7a-tKf" secondAttribute="trailing" constant="15" id="THq-SN-FUW"/>
                                         <constraint firstItem="Yzg-Gx-vYc" firstAttribute="trailing" secondItem="eIu-JA-LIv" secondAttribute="trailing" constant="-171" id="UdH-M7-WPh"/>
                                         <constraint firstItem="Ter-7a-tKf" firstAttribute="top" secondItem="jb7-Dn-Mpc" secondAttribute="bottom" id="WQH-Rz-rQ8"/>
                                         <constraint firstItem="Yzg-Gx-vYc" firstAttribute="bottom" secondItem="eIu-JA-LIv" secondAttribute="bottom" constant="-110" id="buz-SF-Ar6"/>
