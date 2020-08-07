@@ -47,13 +47,13 @@ extension HomeViewController: UICollectionViewDataSource {
                 return UICollectionReusableView()
             }
             
-//            guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "TrackCollectionHeaderView", for: indexPath) as? TrackCollectionHeaderView else {
-//                return UICollectionReusableView()
-//            }
-            
             header.update(with: item)
             header.tapHandler = { item -> Void in
                 // Player를 띄운다.
+                let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
+                guard let playerVC = playerStoryboard.instantiateViewController(identifier: "PlayerViewController") as? PlayerViewController else { return }
+                playerVC.simplePlayer.replaceCurrentItem(with: item)
+                self.present(playerVC, animated: true, completion: nil)
                 print("---> item title : \(item.convertToTrack()?.title)")
             }
             
@@ -69,6 +69,11 @@ extension HomeViewController: UICollectionViewDelegate {
     // 클릭했을때 어떻게 할까?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // TODO: 곡 클릭시 플레이어뷰 띄우기
+        let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
+        guard let playerVC = playerStoryboard.instantiateViewController(identifier: "PlayerViewController") as? PlayerViewController else { return }
+        let item = trackManager.tracks[indexPath.item]
+        playerVC.simplePlayer.replaceCurrentItem(with: item)
+        present(playerVC, animated: true, completion: nil)
     }
 }
 
