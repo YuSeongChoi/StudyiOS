@@ -148,3 +148,14 @@ farmAnimals.isSuperset(of: houseAnimals)
 // 참
 farmAnimals.isDisjoint(with: cityAnimals)
 // 참
+
+
+// Dictionary
+var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+
+print("The airports dictionary contains \(airports.count) items.")
+// The airports dictionary contains 2 items.
+
+// 값 할당
+airports["LHR"] = "London"
+// the airports dictionary now contains 3 items
