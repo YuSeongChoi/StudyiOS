@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
         // interstella에 대한 정보를 검색 API로 가져온다.
         // 거기서 interstella 객체 하나를 가져온다.
         // 가져온 객체를 이용해서 playerViewController 를 띄운다.
-        SearchAPI.search("interstella") { movies in
+        SearchAPI.search("totoro") { movies in
             guard let interstella = movies.first else { return }
             DispatchQueue.main.async {
                 let url = URL(string: interstella.previewURL)!
