@@ -17,8 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Data!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lS-NF-Bzm">
-                                <rect key="frame" x="163" y="268" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="132.5" y="268" width="149" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Customers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAc-ax-5vs">
+                                <rect key="frame" x="107.5" y="324" width="199" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -26,12 +32,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bAc-ax-5vs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="N21-1T-Uzg"/>
+                            <constraint firstItem="bAc-ax-5vs" firstAttribute="top" secondItem="3lS-NF-Bzm" secondAttribute="bottom" constant="20" id="TE2-rd-lLF"/>
                             <constraint firstItem="3lS-NF-Bzm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tns-oc-lvV"/>
                             <constraint firstItem="3lS-NF-Bzm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="zZ2-pc-MbQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dataLabel" destination="3lS-NF-Bzm" id="wvV-Oy-FRV"/>
+                        <outlet property="numOfCustomers" destination="bAc-ax-5vs" id="mRE-mm-hki"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
