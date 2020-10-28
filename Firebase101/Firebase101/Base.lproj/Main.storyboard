@@ -34,13 +34,73 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZe-tw-rc0">
+                                <rect key="frame" x="127" y="453" width="160" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="mRB-bU-M8Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="createCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9El-An-Vae"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h9-Ib-dFc">
+                                <rect key="frame" x="127" y="533" width="160" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="kDf-pg-RN7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Read">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9mZ-HG-EXX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhN-lo-QgH">
+                                <rect key="frame" x="127" y="607" width="160" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="mZB-nx-Xlo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4D-Nx-M7i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgr-eN-Wvh">
+                                <rect key="frame" x="127" y="691" width="160" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="eZR-RW-24x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYw-fy-OOW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3h9-Ib-dFc" firstAttribute="top" secondItem="cZe-tw-rc0" secondAttribute="bottom" constant="32" id="3jZ-Vh-o7a"/>
+                            <constraint firstItem="cgr-eN-Wvh" firstAttribute="centerX" secondItem="vhN-lo-QgH" secondAttribute="centerX" id="92T-6U-AAC"/>
                             <constraint firstItem="bAc-ax-5vs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="N21-1T-Uzg"/>
+                            <constraint firstItem="vhN-lo-QgH" firstAttribute="centerX" secondItem="3h9-Ib-dFc" secondAttribute="centerX" id="NQw-EI-T3K"/>
+                            <constraint firstItem="cgr-eN-Wvh" firstAttribute="top" secondItem="vhN-lo-QgH" secondAttribute="bottom" constant="36" id="OEe-f6-Ezd"/>
+                            <constraint firstItem="vhN-lo-QgH" firstAttribute="top" secondItem="3h9-Ib-dFc" secondAttribute="bottom" constant="26" id="TCH-TF-KEw"/>
                             <constraint firstItem="bAc-ax-5vs" firstAttribute="top" secondItem="3lS-NF-Bzm" secondAttribute="bottom" constant="20" id="TE2-rd-lLF"/>
                             <constraint firstItem="K0s-wL-Fia" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="e2p-Ng-kkj"/>
+                            <constraint firstItem="3h9-Ib-dFc" firstAttribute="centerX" secondItem="cZe-tw-rc0" secondAttribute="centerX" id="etQ-6s-kq3"/>
+                            <constraint firstItem="cZe-tw-rc0" firstAttribute="top" secondItem="K0s-wL-Fia" secondAttribute="bottom" constant="47" id="lab-LN-8BH"/>
+                            <constraint firstItem="cZe-tw-rc0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rnI-id-oZv"/>
                             <constraint firstItem="3lS-NF-Bzm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tns-oc-lvV"/>
                             <constraint firstItem="K0s-wL-Fia" firstAttribute="top" secondItem="bAc-ax-5vs" secondAttribute="bottom" constant="30" id="uV3-LB-GbO"/>
                             <constraint firstItem="3lS-NF-Bzm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="zZ2-pc-MbQ"/>
@@ -60,6 +120,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
