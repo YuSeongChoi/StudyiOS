@@ -28,18 +28,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-wL-Fia">
+                                <rect key="frame" x="178.5" y="390" width="57" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bAc-ax-5vs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="N21-1T-Uzg"/>
                             <constraint firstItem="bAc-ax-5vs" firstAttribute="top" secondItem="3lS-NF-Bzm" secondAttribute="bottom" constant="20" id="TE2-rd-lLF"/>
+                            <constraint firstItem="K0s-wL-Fia" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="e2p-Ng-kkj"/>
                             <constraint firstItem="3lS-NF-Bzm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tns-oc-lvV"/>
+                            <constraint firstItem="K0s-wL-Fia" firstAttribute="top" secondItem="bAc-ax-5vs" secondAttribute="bottom" constant="30" id="uV3-LB-GbO"/>
                             <constraint firstItem="3lS-NF-Bzm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="zZ2-pc-MbQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dataLabel" destination="3lS-NF-Bzm" id="wvV-Oy-FRV"/>
+                        <outlet property="infoBook" destination="K0s-wL-Fia" id="5pj-Ih-y2C"/>
                         <outlet property="numOfCustomers" destination="bAc-ax-5vs" id="mRE-mm-hki"/>
                     </connections>
                 </viewController>

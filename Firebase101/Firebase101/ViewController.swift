@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var numOfCustomers: UILabel!
+    @IBOutlet weak var infoBook: UILabel!
     let db = Database.database().reference()
 
     override func viewDidLoad() {
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
 //        saveBasicTypes()
 //        saveCustomers()
         fetchCustomers()
+        fetchBooks()
     }
     
     func updateLabel() {
@@ -78,6 +80,23 @@ extension ViewController {
                 DispatchQueue.main.async {
                     self.numOfCustomers.text = "# of Customers : \(customers.count)"
                 }
+            } catch let error {
+                print("---> error : \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func fetchBooks() {
+        db.child("customers/0/books/0").observeSingleEvent(of: .value) { snapshot in
+            print("---> Books \(snapshot.value)")
+            do {
+                let data = try JSONSerialization.data(withJSONObject: snapshot.value, options: [])
+                let decoder = JSONDecoder()
+                let books: Dictionary = try decoder.decode(Dictionary<String, String>.self, from: data)
+                DispatchQueue.main.async {
+                    self.infoBook.text = "Book : \(books.values)"
+                }
+                
             } catch let error {
                 print("---> error : \(error.localizedDescription)")
             }
