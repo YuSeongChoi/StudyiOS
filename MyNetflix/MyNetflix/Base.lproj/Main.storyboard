@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -250,14 +250,39 @@
                     <view key="view" contentMode="scaleToFill" id="ce7-Bh-AkS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTY-2d-BwZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyy-mZ-sKE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="pyy-mZ-sKE" secondAttribute="bottom" id="73e-ez-acH"/>
+                                    <constraint firstItem="pyy-mZ-sKE" firstAttribute="leading" secondItem="OTY-2d-BwZ" secondAttribute="leading" id="NDa-2o-c21"/>
+                                    <constraint firstItem="pyy-mZ-sKE" firstAttribute="top" secondItem="OTY-2d-BwZ" secondAttribute="top" id="nb7-Bs-QrX"/>
+                                    <constraint firstAttribute="trailing" secondItem="pyy-mZ-sKE" secondAttribute="trailing" id="pP0-1l-1ak"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cEW-rw-DWC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pyy-mZ-sKE" firstAttribute="width" secondItem="ce7-Bh-AkS" secondAttribute="width" id="JeL-VM-2Sw"/>
+                            <constraint firstItem="cEW-rw-DWC" firstAttribute="bottom" secondItem="OTY-2d-BwZ" secondAttribute="bottom" id="JqA-UC-kNG"/>
+                            <constraint firstItem="OTY-2d-BwZ" firstAttribute="leading" secondItem="cEW-rw-DWC" secondAttribute="leading" id="NSv-8J-jQh"/>
+                            <constraint firstItem="pyy-mZ-sKE" firstAttribute="height" secondItem="ce7-Bh-AkS" secondAttribute="height" priority="250" id="VO7-qb-lU6"/>
+                            <constraint firstItem="cEW-rw-DWC" firstAttribute="trailing" secondItem="OTY-2d-BwZ" secondAttribute="trailing" id="fL5-hS-c1t"/>
+                            <constraint firstItem="OTY-2d-BwZ" firstAttribute="top" secondItem="cEW-rw-DWC" secondAttribute="top" id="tTU-Ed-Htu"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="공개예정" image="play.rectangle.fill" catalog="system" id="pxU-OE-cdZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J18-X4-5SI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3001" y="990"/>
+            <point key="canvasLocation" x="3000.0000000000005" y="989.73214285714278"/>
         </scene>
         <!--더보기-->
         <scene sceneID="Lca-zO-Qyt">
