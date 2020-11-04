@@ -248,15 +248,44 @@
             <objects>
                 <viewController id="Blf-Or-i5j" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ce7-Bh-AkS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTY-2d-BwZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1473"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyy-mZ-sKE">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XxS-J0-7yV">
+                                                <rect key="frame" x="16" y="20" width="382" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="1dB-Tk-EW4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DqS-L1-kEg">
+                                                <rect key="frame" x="16" y="328" width="382" height="600"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-Pv-1li">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="600"/>
+                                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="600" id="VrR-EQ-C4c"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="XxS-J0-7yV" secondAttribute="trailing" constant="16" id="EKr-vZ-Vub"/>
+                                            <constraint firstItem="DqS-L1-kEg" firstAttribute="top" secondItem="XxS-J0-7yV" secondAttribute="bottom" constant="8" id="LzO-3T-5bt"/>
+                                            <constraint firstItem="XxS-J0-7yV" firstAttribute="leading" secondItem="pyy-mZ-sKE" secondAttribute="leading" constant="16" id="TJ1-uk-y0O"/>
+                                            <constraint firstItem="DqS-L1-kEg" firstAttribute="leading" secondItem="pyy-mZ-sKE" secondAttribute="leading" constant="16" id="eaJ-Db-HUb"/>
+                                            <constraint firstAttribute="trailing" secondItem="DqS-L1-kEg" secondAttribute="trailing" constant="16" id="jJv-s0-VMc"/>
+                                            <constraint firstItem="XxS-J0-7yV" firstAttribute="top" secondItem="pyy-mZ-sKE" secondAttribute="top" constant="20" id="pPu-Hr-836"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -279,10 +308,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="공개예정" image="play.rectangle.fill" catalog="system" id="pxU-OE-cdZ"/>
+                    <size key="freeformSize" width="414" height="1600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J18-X4-5SI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3000.0000000000005" y="989.73214285714278"/>
+            <point key="canvasLocation" x="2997" y="1225"/>
         </scene>
         <!--더보기-->
         <scene sceneID="Lca-zO-Qyt">
@@ -551,6 +581,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
