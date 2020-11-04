@@ -246,7 +246,7 @@
         <!--공개예정-->
         <scene sceneID="ryf-ci-vYK">
             <objects>
-                <viewController id="Blf-Or-i5j" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UpComingViewController" id="Blf-Or-i5j" customClass="UpComingViewController" customModule="MyNetflix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ce7-Bh-AkS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,7 +272,7 @@
                                                             <constraint firstAttribute="height" constant="200" id="xkY-am-1CC"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="BuT-Fh-6ng" kind="embed" id="Azx-Y9-YLf"/>
+                                                            <segue destination="BuT-Fh-6ng" kind="embed" identifier="award" id="Azx-Y9-YLf"/>
                                                         </connections>
                                                     </containerView>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juv-ln-v65">
@@ -281,7 +281,7 @@
                                                             <constraint firstAttribute="height" constant="200" id="iQR-Fn-X1f"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="jmP-t0-ogk" kind="embed" id="WpV-2U-114"/>
+                                                            <segue destination="jmP-t0-ogk" kind="embed" identifier="hot" id="WpV-2U-114"/>
                                                         </connections>
                                                     </containerView>
                                                 </subviews>
