@@ -343,18 +343,58 @@
         <!--저장한 콘텐츠 목록-->
         <scene sceneID="G3y-va-xMY">
             <objects>
-                <viewController id="0DL-kq-S35" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" id="0DL-kq-S35" customClass="HistoryViewController" customModule="MyNetflix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P9C-bK-D6z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-Zw-Gdt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="86" id="aAC-ch-ePc" customClass="HistoryCell">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aAC-ch-ePc" id="Kvt-nX-aBK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGp-vu-fGN">
+                                                    <rect key="frame" x="20" y="32.5" width="54.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KGp-vu-fGN" firstAttribute="centerY" secondItem="Kvt-nX-aBK" secondAttribute="centerY" id="yHT-fn-D60"/>
+                                                <constraint firstItem="KGp-vu-fGN" firstAttribute="leading" secondItem="Kvt-nX-aBK" secondAttribute="leading" constant="20" symbolic="YES" id="zIf-QA-EoV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="searchTerm" destination="KGp-vu-fGN" id="FlM-yI-ktZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OYX-Ro-fRu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ncL-Zw-Gdt" firstAttribute="leading" secondItem="OYX-Ro-fRu" secondAttribute="leading" id="Aag-p1-orU"/>
+                            <constraint firstItem="OYX-Ro-fRu" firstAttribute="trailing" secondItem="ncL-Zw-Gdt" secondAttribute="trailing" id="VTn-LI-jqC"/>
+                            <constraint firstItem="ncL-Zw-Gdt" firstAttribute="top" secondItem="OYX-Ro-fRu" secondAttribute="top" id="jaT-lG-AMk"/>
+                            <constraint firstItem="OYX-Ro-fRu" firstAttribute="bottom" secondItem="ncL-Zw-Gdt" secondAttribute="bottom" id="yk6-oe-3td"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="저장한 콘텐츠 목록" image="square.and.arrow.down.fill" catalog="system" id="o4B-qf-7ZJ"/>
+                    <connections>
+                        <outlet property="tableView" destination="ncL-Zw-Gdt" id="3ab-ur-7Kq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igm-fa-Xmf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4877" y="990"/>
+            <point key="canvasLocation" x="4876.811594202899" y="989.73214285714278"/>
         </scene>
         <!--Recommend List View Controller-->
         <scene sceneID="4xS-pn-Mnp">
@@ -630,6 +670,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="rdC-y3-YoU"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ihk-Qm-S7M" secondAttribute="bottom" constant="6" id="Nk8-7V-Xsu"/>
