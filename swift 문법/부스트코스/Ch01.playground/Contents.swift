@@ -157,6 +157,17 @@ someFunction("nuguri","bin")
 // MARK: - Optional Unwrapping
 // 1. Optional Biding - nil check
 // 2. 강제 추출
+func printName(_ name: String) {
+    print("My name is \(name)")
+}
+
+var myName:String? = nil
+if let name = myName {
+    printName(name)
+} else {
+    print("my name is nil")
+}
+
 var optional:Int? = 100
 print("This is \(optional!).") // 강제 추출
 
