@@ -180,6 +180,42 @@ result = calculate(a: 10, b: 20) {$0 + $1}
 // 연산 프로퍼티는 var로만 선언할 수 있다.
 
 struct Money {
-    var currenctRate: Double = 1100
-    var dollar: Double = 0
+    //프로퍼티 감시자 사용
+    var currenctRate: Double = 1000 {
+        willSet(newRate) {
+            print("환율이 \(currenctRate)에서 \(newRate)으로 변경될 예정입니다.")
+        }
+        didSet(oldRate) {
+            print("환율이 \(oldRate)에서 \(currenctRate)으로 변경되었습니다.")
+        }
+    }
+    //프로퍼티 감시자 사용
+    var dollar: Double = 0 {
+        willSet {
+            print("\(dollar)달러에서 \(newValue)달러로 변경될 예정입니다.")
+        }
+        didSet {
+            print("\(oldValue)달러에서 \(dollar)달러로 변경되었습니다.")
+        }
+    }
+    //연산 프로퍼티
+    var won: Double {
+        get {
+            return dollar * currenctRate
+        }
+        set {
+            dollar = newValue / currenctRate
+        }
+        // 프로퍼티 감시자와 연산 프로퍼티 기능은 동시에 사용할 수 없다!!
+    }
 }
+
+var moneyInMyPocket = Money()
+moneyInMyPocket.won = 11000
+print("---> 내 주머니에는 \(moneyInMyPocket.won)이 있고 이걸 환전하면 \(moneyInMyPocket.dollar)야!")
+
+// MARK: - 프로퍼티 감시자
+// 프로퍼티 감시자를 사용하면 값이 변경될 때 원하는 동작을 수행할 수 있다.
+moneyInMyPocket.currenctRate = 1100
+moneyInMyPocket.dollar = 20
+print("---> 바뀐 내 돈은 얼마야?? \(moneyInMyPocket.won)")
