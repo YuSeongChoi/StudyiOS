@@ -316,3 +316,71 @@ guardJobWithOptionalChaining(owner: yuseong)
 // nil 병합 연산자
 let guardJob = yuseong?.home?.guard?.job ?? "2코어 야스오 1대5 펜타킬 가능"
 print(guardJob)
+
+// MARK:- 타입 캐스팅
+/*
+ 스위프트의 타입캐스팅은 인스턴스의 타입을 확인하는 용도
+ 또는 클래스의 인스턴스를 부모 혹은 자식 클래스의 타입으로 사용할 수 있는지
+ 확인하는 용도로 사용합니다.
+ is, as를 사용합니다.
+ */
+
+
+// MARK:- Assertion
+/*
+ assert(_:_:file:line:) 함수를 사용합니다.
+ assert 함수는 디버깅 모드에서만 동작합니다
+ 배포하는 애플리케이션에서는 제외됩니다.
+ 주로 디버깅 중 조건의 검증을 위하여 사용합니다.
+ */
+
+var someInt: Int = 0
+assert(someInt == 0, "someInt != 0")
+someInt = 1
+//assert(someInt == 0) // 동작 중지, 검증 실패
+
+// MARK:- Early Exit
+/*
+ guard를 사용하여 잘못된 값의 전달 시
+ 특정 실행구문을 빠르게 종료합니다.
+ 디버깅 모드 뿐만 아니라 어떤 조건에서도 동작합니다.
+ guard의 else 블럭 내부에서는
+ 특정 코드블럭을 종료하는 지시어(return, break)가 꼭 있어야 합니다.
+ 타입 캐스팅, 옵셔널과도 자주 사용됩니다.
+ 그 외 단순 조건 판단 후 빠르게 종료할 때도 용이합니다.
+ */
+
+func functionWithGuard(age: Int?) {
+    guard let unwrappedAge = age,
+          unwrappedAge < 130,
+          unwrappedAge >= 0 else {
+        print("나이값 입력이 잘못되었습니다.")
+        return
+    }
+    print("당신의 나이는 \(unwrappedAge)세 입니다.")
+}
+
+var count = 1
+while true {
+    guard count < 3 else {
+        break
+    }
+    print(count)
+    count += 1
+}
+
+func someFunction(info: [String: Any]) {
+    guard let name = info["name"] as? String else {
+        print("이름 입력이 잘못되었습니다.")
+        return
+    }
+    guard let age = info["age"] as? Int else {
+        print("나이 입력이 잘못되었습니다.")
+        return
+    }
+    print("\(name) : \(age)")
+}
+
+someFunction(info: ["name":"teddy", "age":"10"])
+someFunction(info: ["name":"teddy"])
+someFunction(info: ["name":"teddy", "age":23])
