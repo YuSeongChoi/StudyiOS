@@ -274,3 +274,45 @@ class PersonD {
         self.age = age
     }
 }
+
+// MARK:- 옵셔널 체이닝과 nil 병합
+class Person {
+    var name: String
+    var job: String?
+    var home: Apartment?
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+class Apartment {
+    var buildingNumber: String
+    var roomeNumber: String
+    var `guard` : Person?
+    var owner: Person?
+    
+    init(dong: String, ho: String) {
+        buildingNumber = dong
+        roomeNumber = ho
+    }
+}
+
+let yuseong: Person? = Person(name: "yuseong")
+let apart: Apartment? = Apartment(dong: "2", ho: "401")
+let yasuo: Person? = Person(name: "yasuo")
+
+// 옵셔널 체이닝이 실행 후 결과값이 nil일 수 있으므로 결과 타입도 옵셔널이다.
+func guardJobWithOptionalChaining(owner: Person?) {
+    if let guardJob = owner?.home?.guard?.job {
+        print("우리집 경비원의 직업은 \(guardJob)입니다.")
+    } else {
+        print("우리집 경비원은 직업이 없어요.")
+    }
+}
+
+guardJobWithOptionalChaining(owner: yuseong)
+
+// nil 병합 연산자
+let guardJob = yuseong?.home?.guard?.job ?? "2코어 야스오 1대5 펜타킬 가능"
+print(guardJob)
