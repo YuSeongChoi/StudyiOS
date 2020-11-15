@@ -219,3 +219,58 @@ print("---> 내 주머니에는 \(moneyInMyPocket.won)이 있고 이걸 환전�
 moneyInMyPocket.currenctRate = 1100
 moneyInMyPocket.dollar = 20
 print("---> 바뀐 내 돈은 얼마야?? \(moneyInMyPocket.won)")
+
+
+/// MARK:- 인스턴스 생성/ 소멸 (init / deinit)
+//  스위프트의 모든 인스턴스는 초기화와 동시에 모든 프로퍼티에 유효한 값이 할당되어 있어야 한다.
+class PersonB {
+    var name: String
+    var age: Int
+    var nickName: String
+    
+    // 이니셜라이저
+    init(name: String, age: Int, nickName: String) {
+        self.name = name
+        self.age = age
+        self.nickName = nickName
+    }
+}
+let hana: PersonB = PersonB(name: "hana", age: 20, nickName: "하나마나")
+
+// 프로퍼티의 초기값이 꼭 필요 없을 때
+class PersonC {
+    var name: String
+    var age: Int
+    var nickName: String?
+    
+    convenience init(name: String, age: Int, nickName: String) {
+        self.init(name: name, age: age)
+        self.nickName = nickName
+    }
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+let jenny: PersonC = PersonC(name: "jenny", age: 18)
+let mike: PersonC = PersonC(name: "mike", age: 15, nickName: "마이크앤다이크")
+
+// 실패 가능한 이니셜라이저
+class PersonD {
+    var name: String
+    var age: Int
+    var nickName: String?
+    
+    init?(name: String, age: Int) {
+        if(0...120).contains(age) == false {
+            return nil
+        }
+        if(name.count == 0) {
+            return nil
+        }
+        self.name = name
+        self.age = age
+    }
+}
