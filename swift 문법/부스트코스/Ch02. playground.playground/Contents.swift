@@ -384,3 +384,62 @@ func someFunction(info: [String: Any]) {
 someFunction(info: ["name":"teddy", "age":"10"])
 someFunction(info: ["name":"teddy"])
 someFunction(info: ["name":"teddy", "age":23])
+
+// MARK- 프로토콜
+/*
+ 프로토콜은 특정 역할을 수행하기 위한
+ 메서드, 프로퍼티, 이니셜라이저 등의 요구사항을 정의합니다.
+ 
+ 구조체, 클래스, 열거형은 프로토콜을 채택해서 프로토콜의 요구사항을 실제로 구현할 수 있습니다.
+ 어떤 프로토콜의 요구사항을 모두 따르는 타입은 그 '프로토콜을 준수한다.'고 표현합니다.
+ 프로토콜의 요구사항을 충족시키려면 프로토콜이 제시하는 기능을 모두 구현해야 합니다.
+ */
+
+protocol Talkable {
+    var topic: String {get set}
+    var language: String {get}
+    
+    func talk()
+    
+    init(topic: String, language: String)
+}
+
+struct PersonTalkable: Talkable {
+    var topic: String
+    let language: String
+    
+    func talk() {
+        print("\(topic)에 대해 \(language)로 말합니다.")
+    }
+    
+    init(topic: String, language: String) {
+        self.topic = topic
+        self.language = language
+    }
+}
+
+// 프로토콜은 다중 상속이 가능합니다.
+protocol Readable {
+    func read()
+}
+protocol Writeable {
+    func write()
+}
+protocol ReadSpeakable: Readable {
+    func speak()
+}
+protocol ReadWriteSpeakable: Readable, Writeable {
+    func speak()
+}
+
+struct SomeTYpe: ReadWriteSpeakable {
+    func read() {
+        print("Read")
+    }
+    func write() {
+        print("Write")
+    }
+    func speak() {
+        print("Speak")
+    }
+}
