@@ -432,7 +432,7 @@ protocol ReadWriteSpeakable: Readable, Writeable {
     func speak()
 }
 
-struct SomeTYpe: ReadWriteSpeakable {
+struct SomeType: ReadWriteSpeakable {
     func read() {
         print("Read")
     }
@@ -443,3 +443,38 @@ struct SomeTYpe: ReadWriteSpeakable {
         print("Speak")
     }
 }
+
+// MARK: 익스텐션
+/*
+ 익스텐션은 구조체, 클래스, 열거형, 프로토콜 타입에 새로운 기능을 추가할 수 있는 기능입니다.
+ 기능을 추가하려는 타입의 구현된 소스 코드를 알지 못하거나 볼 수 없다 해도, 타입만 알고 있따면 그 타입의 기능을 확장할 수도 있습니다.
+ 
+ 익스텐션으로 추가할 수 있는 기능
+ - 연산 타입 프로퍼티 / 연산 인스턴스 프로퍼티
+ - 타입 메서드 / 인스턴스 메서드
+ - 이니셜라이저
+ - 서브스크립트
+ - 중첩 타입
+ - 특정 프로토콜을 준수할 수 있도록 기능 추가
+ 
+ 단, 기존에 존재하는 기능을 재정의할 수는 없다!!!
+ */
+
+extension Int {
+    var isEven: Bool {
+        return self % 2 == 0
+    }
+    var isOdd: Bool {
+        return self % 2 == 1
+    }
+    func multiply(by n: Int) -> Int {
+        return self * n
+    }
+}
+
+print(1.isEven)
+print(2.isEven)
+print(1.isOdd)
+print(2.isOdd)
+print(3.multiply(by: 2))
+print(4.multiply(by: 3))
