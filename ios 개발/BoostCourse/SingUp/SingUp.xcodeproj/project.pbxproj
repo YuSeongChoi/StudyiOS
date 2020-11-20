@@ -14,6 +14,7 @@
 		040BAA9E2565184700E9F14A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040BAA9D2565184700E9F14A /* Assets.xcassets */; };
 		040BAAA12565184700E9F14A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040BAA9F2565184700E9F14A /* LaunchScreen.storyboard */; };
 		040BAAAA256518D500E9F14A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BAAA9256518D500E9F14A /* SecondViewController.swift */; };
+		043A593B256787BB00C4725E /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A593A256787BB00C4725E /* UserInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		040BAAA02565184700E9F14A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040BAAA22565184700E9F14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		040BAAA9256518D500E9F14A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		043A593A256787BB00C4725E /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				040BAA962565183F00E9F14A /* SceneDelegate.swift */,
 				040BAA982565183F00E9F14A /* ViewController.swift */,
 				040BAA9A2565183F00E9F14A /* Main.storyboard */,
+				043A593A256787BB00C4725E /* UserInformation.swift */,
 				040BAAA9256518D500E9F14A /* SecondViewController.swift */,
 				040BAA9D2565184700E9F14A /* Assets.xcassets */,
 				040BAA9F2565184700E9F14A /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043A593B256787BB00C4725E /* UserInformation.swift in Sources */,
 				040BAAAA256518D500E9F14A /* SecondViewController.swift in Sources */,
 				040BAA992565183F00E9F14A /* ViewController.swift in Sources */,
 				040BAA952565183F00E9F14A /* AppDelegate.swift in Sources */,
