@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         diceImageView5.image = #imageLiteral(resourceName: "DiceFive")
     }
 
-
+    @IBAction func rollButtonPressed(_ sender: UIButton) {
+        diceImageView1.image = #imageLiteral(resourceName: "DiceFive")
+        diceImageView2.image = #imageLiteral(resourceName: "DiceFive")
+    }
+    
 }
 
