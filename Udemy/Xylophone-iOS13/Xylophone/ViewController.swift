@@ -10,11 +10,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func keyPressed(_ sender: UIButton) {
-        playSound()
+        if let key = sender.currentTitle {
+            playSound(key)
+        }
     }
     
-    func playSound() {
-        let url = Bundle.main.url(forResource: "C", withExtension: "wav")
+    func playSound(_ key: String) {
+        let url = Bundle.main.url(forResource: key, withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
     }
