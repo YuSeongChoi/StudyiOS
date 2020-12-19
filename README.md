@@ -25,7 +25,8 @@ iOS 학습을 위한 저장소입니다.
  Auto Layout
  UIImagePickerControll
  Button
-
+ Label, Modal
+ 
 4. 토이 프로젝트
 
 5. Udemy Angela iOS 학습
