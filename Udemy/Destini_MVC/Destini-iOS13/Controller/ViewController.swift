@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var storyLabel: UILabel!
     @IBOutlet weak var choice1Button: UIButton!
     @IBOutlet weak var choice2Button: UIButton!
+    var num: Int = 0
     
     let stories = [
         Story(title: "You see a fork in the road", choice1: "Take a left", choice2: "Take a right"),
@@ -26,13 +27,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storyLabel.text = stories[0].title
-        choice1Button.setTitle(stories[0].choice1, for: .normal)
-        choice2Button.setTitle(stories[0].choice2, for: .normal)
+        updateUI()
     }
 
     @IBAction func choiceMade(_ sender: UIButton) {
+        let choice = String(sender.titleLabel?.text! ?? "nil")
+        if(choice == stories[num].choice1) {
+            num += 1
+        } else {
+            num += 2
+        }
         
+        checkStory()
+        updateUI()
+    }
+    
+    func updateUI() {
+        storyLabel.text = stories[num].title
+        choice1Button.setTitle(stories[num].choice1, for: .normal)
+        choice2Button.setTitle(stories[num].choice2, for: .normal)
+    }
+    
+    func checkStory() {
+        if(num+1 > stories.count) {
+            num = 0
+        }
     }
     
 }
